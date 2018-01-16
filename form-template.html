@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="UTF-8">
+      <title>Form</title>
+      <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+   
+      <!--
+         Form with HTML5 tags and basic CSS
+      -->
+      
+      <style type="text/css">
+
+         body {
+            font-family: 'Roboto', sans-serif;
+         }
+         
+         #container {
+            width: 100%;
+            margin: auto;
+         }
+         
+         form {
+            text-align: right;
+            border: 1px solid black;
+            padding: 30px;
+            background-color: #E8D0A9;
+         }
+         
+         input {
+            margin: 5px;
+         }
+         
+         label {
+            font-weight: bold;
+         }
+         
+         #submit {
+            background-color: #F5FAFA;
+            color: #6D929B;
+            font-weight: bold;
+            font-size: 1.2rem;
+            padding: 15px;
+            border-radius: 10px;
+         }
+
+         legend {
+            font-size: 30px;
+            background-color: #fff;
+            border-radius: 5px;
+            border: 1px solid #999;
+            padding: 4px 15px;
+            color: #6D929B;
+            border-radius: 10px;
+         }
+            
+         label.field {
+            display: block;
+            text-align: right;
+            float: left;
+         }
+         
+         input {
+            border-radius: 5px;
+            padding: 6px 8px;
+         }
+         
+         .field {
+            padding: 6px 8px;
+         }
+
+         #currency {
+             width: 220px;
+             border-radius: 5px;
+             padding: 6px 8px;
+         }
+
+         fieldset {
+            width: 450px;
+            border: 1px solid #999;
+            border-radius: 20px;
+            clear: both;
+            padding: 20px;
+            margin-bottom: 100px;
+            background-color:rgba(129, 187, 201,.2);
+         }
+         
+         #checkbox {
+            display: flex;
+            justify-content: space-between;
+         }
+         
+         #radiobutton, #selectbox, #range, #datalist {
+            text-align: left;
+         }
+         
+      </style>
+   </head>
+   <body>
+      <div id="container">
+         <form action="submit_form.php" method="post">
+            <fieldset>
+               <legend>Registration</legend>
+              <label for="fname">First name: *</label> <input id="fname" placeholder="Your name ..." type="text" name="fname" autocomplete="on" required=""><br>
+              <label for="email">Email: *</label> <input id="email" placeholder="Your email ..." type="email" name="email" autocomplete="on" required=""  autofocus><br>
+              <label for="website">Website:</label> <input id="website" placeholder="Your website ..." type="url" name="website" autocomplete="on"><br>
+              <label for="password">Password:</label> <input id="password" placeholder="Your password ..." type="password" name="password" autocomplete="on"><br>
+              <label for="phone">Phone:</label> <input id="phone" placeholder="Your phone ..." type="number" name="phone" autocomplete="on" disabled><br>
+              <label for="passport">Passport:</label> <input id="passport" placeholder="Your passport ..." type="text" name="passport" pattern="[0-9]{7}[A-Z]{1}"><br>
+              <label for="eircode">Eircode:</label> <input id="eircode" placeholder="Your eircode ..." type="text" name="eircode" pattern="[A-Z]{1}[0-9]{2} [A-Z0-9]{4}"><br>
+              <label for="creditcard">Credit Card:</label> <input id="creditcard" placeholder="Your credit card ..." type="text" name="creditcard" pattern="[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{4}"><br>
+              <input id="submit" type="submit" value="Submit">
+            </fieldset>
+            
+            <fieldset  id="checkbox">
+               <legend id="checkbox">Checkboxes</legend>
+               <label class="checkboxes" for="starter">starter</label> <input class="checkboxes" id="starter" type="checkbox" name="starter">
+               <label class="checkboxes" for="main">main</label> <input class="checkboxes" id="main" type="checkbox" name="main">
+               <label class="checkboxes" for="dessert">dessert</label> <input class="checkboxes" id="dessert" type="checkbox" name="dessert">
+            </fieldset>
+            
+            <fieldset id="radiobutton">
+               <legend>Radio buttons</legend>
+               <input type="radio" name="gender" value="male" checked> Male<br>
+               <input type="radio" name="gender" value="female"> Female<br>
+               <input type="radio" name="gender" value="other"> Other
+            </fieldset>
+            
+            <fieldset id="selectbox">
+               <legend>Select Boxes</legend>
+               <select>
+                  <option value="sun">sun</option>
+                  <option value="earth">earth</option>
+                  <option value="fire">fire</option>
+                  <option value="water">water</option>
+               </select> 
+            </fieldset>
+            
+            <fieldset id="datalist">
+               <legend>Data List</legend>
+               <input type="text" name="mydatalist" list="musicgenres">
+               <datalist id="musicgenres">
+                  <option value="hip-hop">
+                  <option value="rock">
+                  <option value="classic">
+                  <option value="jazz">
+                  <option value="dance">
+               </datalist> 
+            </fieldset>
+            
+            <fieldset id="range">
+               <legend>Range</legend>
+               <input id="range1" type="range" min="100" max="500" step="10" />
+            </fieldset>
+            
+              
+            
+         </form> 
+      </div>
+   </body>
+
+</html>
